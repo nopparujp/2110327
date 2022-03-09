@@ -1,0 +1,1 @@
+ffmpeg -video_size 2560x1080 -f x11grab -i :0.0 -r 2 -probesize 40M  -vcodec libx264 -b:v 256k -threads 1 ~/Downloads/algorithm/6330261921_quiz2_0.mp4
