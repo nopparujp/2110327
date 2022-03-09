@@ -24,6 +24,8 @@ int search(vector<int> &v, int &query) {
 }
 int main() {
     int n, m, query;
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
     cin >> n >> m;
     vector<int> v(n);
     for (int i = 0; i < n; ++i) {
