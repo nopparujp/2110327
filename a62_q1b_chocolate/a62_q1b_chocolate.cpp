@@ -7,8 +7,8 @@ vector<int> v, table;
 int cal() {
     for (int i = 1; i <= n; ++i) {
         for (int j = 0; j < m; ++j) {
-            if (i - v[j] >= 0) {
-                table[i] += table[i - v[j] % c];
+            if (v[j] <= i) {
+                table[i] += table[i - v[j]];
                 table[i] %= c;
             }
         }
