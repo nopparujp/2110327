@@ -5,7 +5,6 @@ int value;
 void fill(int l, int r, int k, int *arr) {
     if (((r - l) << 1) - 1 == k) {
         for (int i = l; i < r; ++i) {
-            // cout << value-- << " ";
             arr[i] = value--;
         }
 
@@ -13,7 +12,6 @@ void fill(int l, int r, int k, int *arr) {
         int tmp = value + 1;
         for (int i = r - 1; i >= l; --i) {
             arr[i] = value--;
-            // cout << tmp - value-- << " ";
         }
 
     } else {
