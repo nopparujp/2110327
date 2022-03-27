@@ -11,5 +11,7 @@ CTestTestfile.cmake
 _deps
 *.exe
 *.out
+tempCodeRunnerFile.*
 build
+
 .cache
