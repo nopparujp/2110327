@@ -4,7 +4,6 @@ vector<vector<int>> v;
 vector<int> visited;
 int n, e, k,connection;
 void dfs(int i, int l) {
-    // cout << i << " " << l << endl;
     visited[i] = 1;
     if (l < k) {
         for (auto t : v[i]) {
@@ -30,7 +29,6 @@ int main() {
         visited = vector<int>(n, 0);
         connection = 0;
         dfs(i, 0);
-        // cout << i << ": " << tmp << endl;
         max_connection = max(connection, max_connection);
     }
     cout << max_connection + 1 << endl;
