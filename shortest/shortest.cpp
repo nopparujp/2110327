@@ -32,5 +32,6 @@ int main() {
     for (auto i : d) {
         cout << i << " ";
     }
+    cout << endl;
     return 0;
 }

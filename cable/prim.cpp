@@ -35,15 +35,9 @@ int main() {
             }
         }
     }
-    int mx = 0;
-    for (auto i : g) {
-        for (auto j : i) {
-            mx = max(mx, j);
-            cout << j << " ";
-        }
-        cout << "\n";
+    int s = 0;
+    for (auto i : d) {
+        s += i;
     }
-    for(auto i : d){
-        cout << i << " ";
-    }
+    cout << s << "\n";
 }
