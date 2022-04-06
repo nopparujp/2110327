@@ -9,11 +9,11 @@ int main() {
     vector<int> d1 = {0, 0, 1, -1};
     vector<int> d2 = {1, -1, 0, 0};
     cin >> c >> r;
-    vector<vector<int>> distance(c + 2, vector<int>(r + 2, 0));
-    vector<vector<int>> visited(c + 2, vector<int>(r + 2, 0));
-    vector<vector<int>> map(c + 2, vector<int>(r + 2, 0));
-    for (int i = 1; i <= c; ++i) {
-        for (int j = 1; j <= r; ++j) {
+    vector<vector<int>> distance(c , vector<int>(r, 0));
+    vector<vector<int>> visited(c , vector<int>(r, 0));
+    vector<vector<int>> map(c , vector<int>(r , 0));
+    for (int i = 0; i < c; ++i) {
+        for (int j = 0; j < r; ++j) {
             cin >> tmp;
             if (tmp == '#') {
                 map[i][j] = 0;
@@ -23,7 +23,7 @@ int main() {
     }
     int i, j, ni, nj;
     queue<pair<int, int>> q;
-    q.push({1, 1});
+    q.push({0, 0});
     while (!q.empty()) {
         i = q.front().first;
         j = q.front().second;
@@ -31,14 +31,14 @@ int main() {
         if (visited[i][j])
             continue;
         visited[i][j] = 1;
-        if (i == c && j == r) {
+        if (i == c-1 && j == r-1) {
             cout << distance[i][j] << endl;
             return 0;
         }
         for (int k = 0; k < 4; ++k) {
             ni = i + d1[k];
             nj = j + d2[k];
-            if (ni < 1 || ni > c || nj < 1 || nj > r)
+            if (ni < 0 || ni >= c || nj < 0 || nj >= r)
                 continue;
             if (map[ni][nj]) {
                 q.push({ni, nj});
