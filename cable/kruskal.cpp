@@ -24,8 +24,8 @@ int main() {
     cin >> n;
     priority_queue<iii, vector<iii>, greater<iii>> pq;
     int tmp;
-    p = vector<int>(n );
-    p[n-1]  = n-1;
+    p = vector<int>(n);
+    p[n - 1] = n - 1;
     for (int i = 0; i < n - 1; ++i) {
         p[i] = i;
         for (int j = i + 1; j < n; ++j) {
