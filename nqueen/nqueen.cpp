@@ -40,5 +40,5 @@ int main() {
     cin >> n;
     vi table(n, -1);
     solve(table, 0);
-    cout << ans;
+    cout << ans << endl;
 }

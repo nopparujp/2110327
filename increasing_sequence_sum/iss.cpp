@@ -19,5 +19,5 @@ int main() {
     cin.tie(0);
     cin >> n;
     cal(0,1);
-    cout << ans;
+    cout << ans + 1;
 }
