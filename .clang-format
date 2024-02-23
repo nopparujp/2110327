@@ -1,8 +1,7 @@
----
 BasedOnStyle: LLVM
 IndentWidth: 4
----
-Language: Cpp
-# Force pointers to the type for C++.
-DerivePointerAlignment: false
-PointerAlignment: Right
+BraceWrapping:
+  AfterControlStatement: true
+  AfterFunction: true
+  AfterClass: true
+BreakBeforeBraces: Custom
