@@ -9,7 +9,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int MOD = (int)1e8 + 7;
+    const int MOD = 1e8 + 7;
     int N, a, b, sum = 0;
     vector<int> v(4, 1);
     cin >> N;
